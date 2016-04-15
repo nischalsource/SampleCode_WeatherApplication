@@ -1,0 +1,9 @@
+parameters:
+    weather.datasources:
+        'openweatherservice':
+            displayname: 'Open Weather Service'
+            token: 'MNFP-367-GLH'
+
+        'googleweatherservice':
+            displayname: 'Google Weather Service'
+            token: 'ABNE34-FJ-356'

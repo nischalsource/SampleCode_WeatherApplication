@@ -1,0 +1,28 @@
+parameters:
+    weather.weather_service.class: AppBundle\Services\WeatherService
+    weather.weather_datasource_factory: AppBundle\Patterns\DataSourceFactory
+    weather.logger.wrapper_class: AppBundle\Services\LoggerService
+    weather.exception_listener.class: AppBundle\Listener\ExceptionListener
+
+services:
+    weather.weatherservice:
+        class: %weather.weather_service.class%
+        arguments:
+                entityManager: "@doctrine.orm.entity_manager"
+                container: "@service_container"
+                request: "@request_stack"
+    weather.weather_datasourcefactory:
+            class: %weather.weather_datasource_factory%
+            arguments:
+                    container: "@service_container"
+    weather.logger:
+             class: %weather.logger.wrapper_class%
+             arguments:
+                    container: "@service_container"
+    kernel.listener.weather_exception_listener:
+            class: %weather.exception_listener.class%
+            calls:
+              - [setTemplating, ["@templating"]]
+              - [setKernel, ["@kernel"]]
+            tags:
+              - { name: kernel.event_listener, event: kernel.exception, method: onKernelException }

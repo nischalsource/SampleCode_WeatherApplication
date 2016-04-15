@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<p>Enter a City Name</p>
+
+
+<form action="results" method="post">
+    City Name:<br>
+    <input type="text" name="city"><br>
+
+    <input type="submit">
+</form>
+
+
+{% endblock %}

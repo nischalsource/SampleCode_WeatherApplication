@@ -1,0 +1,31 @@
+{
+  "name": "simple_weather_client",
+  "description": "A Simple Weather Client",
+  "version": "0.0.1",
+  "author": {
+    "name": "Nischal Bachu",
+    "email": "nischalbachu@gmail.com",
+    "url": "http://www.bachu.sytes/"
+  },
+  "config": {
+    "hash_map": "./src/AppBundle/Resources/config/assets_map.json",
+    "src": "./src/AppBundle/Resources/assets",
+    "dist": "./web/assets",
+    "web_dir": "./web",
+    "asset_path": "/assets",
+    "asset_url": "/assets"
+  },
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-compass": "~1.0",
+    "grunt-contrib-rename": "~0.0.*",
+    "grunt-contrib-uglify": "*",
+    "grunt-assets-hash": "~0.1.*"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-imagemin": "~0.8.*",
+    "grunt-contrib-watch": "~0.6.*"
+  }
+}

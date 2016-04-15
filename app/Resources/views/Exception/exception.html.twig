@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div style="text-align: center">
+
+
+        <div class="login_content_wrapper">
+            <div class="login_wrapper">
+
+                <h2><b>Simple Weather Client Exception</b></h2>
+
+                Oops something went wrong!
+
+                <br><br>
+
+                <h1>Error {{ code }}: <br> {{ message }}</h1>
+
+
+                    <b>Code:</b> <br/>{{ code }} <br/>
+                    <b> File:</b> <br/>{{ file }} <br/>
+                    <b>Line:</b> <br/>{{ line }} <br/>
+                    <b>Trace:</b> <br/>{{ trace|nl2br }} <br/>
+
+
+
+                <br><br><br>
+
+                <p style="font-size: 20px;">
+                    The resource you are looking for is unavailable or not found.
+                    <br><br>
+
+                <p style="">
+                    You can return to <a href="/">Home</a>
+                </p>
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
+
+
