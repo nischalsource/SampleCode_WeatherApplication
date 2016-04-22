@@ -5,8 +5,8 @@ PHP-based weather application that can use multiple data sources as input.
 
 Demonstrates the following concepts:
 ===================================
-*OOP
-*Interface
+*    OOP
+*    Interface
 *Abstract Class 
 *DI
 *UnitTest
