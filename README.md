@@ -1,4 +1,17 @@
 weather
 =======
 
-A Symfony project created on April 15, 2016, 11:31 am.
+PHP-based weather application that can use multiple data sources as input.
+
+Demonstrates the following concepts:
+===================================
+OOP
+Interface
+Abstract Class 
+DI
+UnitTest
+Design Pattern
+JavaScript
+CSS
+HTML
+PHP
